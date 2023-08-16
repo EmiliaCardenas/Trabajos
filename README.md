@@ -1,1 +1,5 @@
-#Quiz de ANIME
+# Quiz de ANIME
+
+Un test para saber que anime(s) serían los más recomendados para ver conforme a tus gustos y actividades.
+
+La importancia de este proyecto es poder brindar ideas de qué ver. ¿Por qué esto es importante? Hay varias razones; empezando por la liberación de dopamina, ya que relacionamos la idea de descansar con una recompensa para nuestro cerebro. Es una manera de separarse de la rutina, creando un momento de liberación y relajación que a veces no se obtiene a diario. Sirve para la socialización, al tener un tema en común el cual se puede compartir con más personas, generando nuevos lazos. Se pueden liberar sentimientos, generando empatía, odio, amor, tristeza, etc. por algún personaje. Generando nuevas sensaciones y de cierta manera, pudiendo ser parte de ese universo. Las creaciones audiovisuales en su mayoría tiene lecciones, algunas buenas y otras son lo contrario, pero en si intenta enseñarle algo al espectador. Siendo que si se ve un impacto positivo por esas lecciones, el espectador puede implementarlas en su vida diaria. Los espectadores se pueden sentir seguros al verlas, haciendo que sentimientos como estrés o ansiedad se disipen por un rato, teniendo así un mejor estado de ánimo. Esas serían las principales razones por las cuales es bueno despejarse y tener tiempo para ver un contenido audio visual.
