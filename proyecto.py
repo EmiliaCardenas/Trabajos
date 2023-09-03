@@ -43,16 +43,42 @@ Teniendo varias opciones para escoger, siendo un maximo de 2 las que
 el usuario podrá elegir (checkbutton)
 """
 text4 = tkinter.Label(quiz_anime,
-                      text="¿Que genero prefieres (escoge 2 como maximo)")
-text4.pack(anchor="w")
-eleccion3 = ["romance","comedia","drama","accion",
-             "ciencia ficcion", "aventura", "misterio", "terror"]
-genero = []
-for index in range(len(eleccion3)):
-    genero = tkinter.StringVar(value = 0)
-    checkbutton3 = tkinter.Checkbutton(quiz_anime, text= eleccion3[index],
-                                       variable = genero, indicatoron=0,
-                                       width=20).pack(anchor="w")
+                      text="¿Que genero prefieres? (escoge 2 como maximo)")
+text4.place(x=300, y=0)
+
+genero = tkinter.IntVar()
+genero2 = tkinter.IntVar()
+genero3 = tkinter.IntVar()
+genero4 = tkinter.IntVar()
+genero5 = tkinter.IntVar()
+genero6 = tkinter.IntVar()
+genero7 = tkinter.IntVar()
+genero8 = tkinter.IntVar()
+
+c31 = tkinter.Checkbutton(quiz_anime, text = "romance", indicatoron=0,
+                          variable = genero, onvalue = 1,
+                          offvalue = 0, width=20).place(x=400, y=20)
+c32 = tkinter.Checkbutton(quiz_anime, text = "comedia", indicatoron=0,
+                          variable = genero2, onvalue = 1,
+                          offvalue = 0, width=20).place(x=400, y=40)
+c33 = tkinter.Checkbutton(quiz_anime, text = "drama", indicatoron=0,
+                          variable = genero3, onvalue = 1,
+                          offvalue = 0, width=20).place(x=400, y=60)
+c34 = tkinter.Checkbutton(quiz_anime, text = "accion", indicatoron=0,
+                          variable = genero4, onvalue = 1,
+                          offvalue = 0, width=20).place(x=400, y=80)
+c35 = tkinter.Checkbutton(quiz_anime, text = "ciencia ficcion", indicatoron=0,
+                          variable = genero5, onvalue = 1,
+                          offvalue = 0, width=20).place(x=400, y=100)
+c36 = tkinter.Checkbutton(quiz_anime, text = "aventura", indicatoron=0,
+                          variable = genero6, onvalue = 1,
+                          offvalue = 0, width=20).place(x=400, y=120)
+c37 = tkinter.Checkbutton(quiz_anime, text = "misterio", indicatoron=0,
+                          variable = genero7, onvalue = 1,
+                          offvalue = 0, width=20).place(x=400, y=140)
+c38 = tkinter.Checkbutton(quiz_anime, text = "terror", indicatoron=0,
+                          variable = genero8, onvalue = 1,
+                          offvalue = 0, width=20).place(x=400, y=160)")
 """
 Pregunta de que generos especificos de anime son los elegidos y
 preferidos por el usuario
@@ -121,20 +147,69 @@ el usuario podrá elegir (checkbutton)
 """
 text6 = tkinter.Label(quiz_anime,
                       text="¿Te gustan los deportes? Si sí,escoge cuales (maximo 2)")
-text6.pack(anchor="w")
-eleccion5 = ["Si","No"]
-saberdep = tkinter.StringVar()
-for index in range(len(eleccion5)):
-    radiobutton5 = tkinter.Radiobutton(quiz_anime, text= eleccion5[index],
-                                       variable = saberdep,indicatoron=0,
-                                       value=index, width=10).pack(anchor="w")
+text6.place(x=600, y=0)
+
+deporte = tkinter.IntVar()
+deporte2 = tkinter.IntVar()
+deporte3 = tkinter.IntVar()
+deporte4 = tkinter.IntVar()
+deporte5 = tkinter.IntVar()
+deporte6 = tkinter.IntVar()
+deporte7 = tkinter.IntVar()
+deporte8 = tkinter.IntVar()
+deporte9 = tkinter.IntVar()
+deporte10 = tkinter.IntVar()
+
+c51 = tkinter.Checkbutton(quiz_anime, text = "football", indicatoron=0,
+                          variable = deporte, onvalue = 1,
+                          offvalue = 0, width=20).place(x=700, y=20)
+c52 = tkinter.Checkbutton(quiz_anime, text = "baseball", indicatoron=0,
+                          variable = deporte2, onvalue = 1,
+                          offvalue = 0, width=20).place(x=700, y=40)
+c53 = tkinter.Checkbutton(quiz_anime, text = "basquetball", indicatoron=0,
+                          variable = deporte3, onvalue = 1,
+                          offvalue = 0, width=20).place(x=700, y=60)
+c54 = tkinter.Checkbutton(quiz_anime, text = "natacion", indicatoron=0,
+                          variable = deporte4, onvalue = 1,
+                          offvalue = 0, width=20).place(x=700, y=80)
+c55 = tkinter.Checkbutton(quiz_anime, text = "golf", indicatoron=0,
+                          variable = deporte5, onvalue = 1,
+                          offvalue = 0, width=20).place(x=700, y=100)
+c56 = tkinter.Checkbutton(quiz_anime, text = "tenis", indicatoron=0,
+                          variable = deporte6, onvalue = 1,
+                          offvalue = 0, width=20).place(x=700, y=120)
+c57 = tkinter.Checkbutton(quiz_anime, text = "gymnasia", indicatoron=0,
+                          variable = deporte7, onvalue = 1,
+                          offvalue = 0, width=20).place(x=700, y=140)
+c58 = tkinter.Checkbutton(quiz_anime, text = "patinaje", indicatoron=0,
+                          variable = deporte8, onvalue = 1,
+                          offvalue = 0, width=20).place(x=700, y=160)
+c59 = tkinter.Checkbutton(quiz_anime, text = "skate", indicatoron=0,
+                          variable = deporte9, onvalue = 1,
+                          offvalue = 0, width=20).place(x=700, y=180)
+c510 = tkinter.Checkbutton(quiz_anime, text = "ningun deporte", indicatoron=0,
+                          variable = deporte10, onvalue = 1,
+                          offvalue = 0, width=20).place(x=700, y=200)
 """
 Una vez esten hechas las funciones se podran compilar las opciones
 y teniendo animes que tengan un rango dependiendo de cada pregunta
 asi sabien que programas son mas compatibles con las opciones
 siendo que se van a dividir en peliculas y series
 se creará un rango en las opciones para que sea mas amplia la gama 
+Abajo se demuestra un ejemplo de como seria un resultado en concreto
 """
+def resultado ():
+    if ((deporte10.get() == 1) and (formato.get() == 0)
+        and (cantidad.get() == 4) and ((genero3.get() == 1) or (genero6.get() == 1))
+        and ((genero_anime2.get() == 1) or (genero_anime3.get() == 1))
+        and (deporte10.get() == 1)):
+        chihiro = tkinter.Label(quiz_anime, text = "Deberias ver: <<El Viaje de Chihiro>>")
+        chihiro.place(x=0, y=630)
+
+    else:
+        malo = tkinter.Label(quiz_anime, text = "No hay ningun anime con esa descripcion")
+        malo.place(x=0, y=650)
+
 
 #Programa (mejor hecho)
 print("Escribre tu nombre, por favor: ")
