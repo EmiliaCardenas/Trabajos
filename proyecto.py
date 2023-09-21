@@ -198,20 +198,226 @@ siendo que se van a dividir en peliculas y series
 se creará un rango en las opciones para que sea mas amplia la gama 
 Abajo se demuestra un ejemplo de como seria un resultado en concreto
 """
+#----------------------------------------------------------------------------------
 def resultado ():
-    if ((deporte10.get() == 1) and (formato.get() == 0)
-        and (cantidad.get() == 4) and ((genero3.get() == 1) or (genero6.get() == 1))
-        and ((genero_anime2.get() == 1) or (genero_anime3.get() == 1))
-        and (deporte10.get() == 1)):
-        chihiro = tkinter.Label(quiz_anime, text = "Deberias ver: <<El Viaje de Chihiro>>")
-        chihiro.place(x=0, y=630)
+#----------------------------------------------------------------------------------
+"""
+Aqui se encuentran algunas de las opciones que
+pueden salir al completar el quiz
+se van a añadir más de poco a poco
+ya que son opciones excatas para que sean
+compatibles con las elecciones
+"""
+#El Viaje de Chihiro
+    if ((((formato.get() == 0))
+        and (cantidad.get() == 4)
+        and ((romance.get() == 1) and (aventura.get() == 1))
+        and ((isekai.get() == 1) and (superpoderes.get() == 1))
+        and (ningun.get() == 1))):
+        chihiro = tkinter.Label(quiz_anime, text = "Deberias ver: << El Viaje de Chihiro >>")
+        chihiro.pack(anchor="w")
 
+#El Castillo Vagabundo
+    if ((((formato.get() == 0))
+        and (cantidad.get() == 4)
+        and ((romance.get() == 1) and (aventura.get() == 1))
+        and ((shoujo.get() == 1) and (superpoderes.get() == 1))
+        and (ningun.get() == 1))):
+        ecv = tkinter.Label(quiz_anime, text = "Deberias ver: << El Castillo Vagabundo >>")
+        ecv.pack(anchor="w")
+
+#I wanna eat your pancreas
+    elif ((((formato.get() == 0))
+        and (cantidad.get() == 4)
+        and ((drama.get() == 1) and (romance.get() == 1))
+        and ((slice_of_life.get() == 1) and (josei.get() == 1))
+        and (ningun.get() == 1))):
+        iweyp = tkinter.Label(quiz_anime, text = "Deberias ver: << I wanna eat your pancreas >>")
+        iweyp.pack(anchor="w")
+
+#Umibe no Etranger
+    elif ((((formato.get() == 0))
+        and (cantidad.get() == 4)
+        and ((drama.get() == 1) and (romance.get() == 1))
+        and ((slice_of_life.get() == 1) and (bl.get() == 1))
+        and (ningun.get() == 1))):
+        une = tkinter.Label(quiz_anime, text = "Deberias ver: << Umibe no Etranger >>")
+        une.pack(anchor="w")
+
+#----------------------------------------------------------------------------------
+
+#Demon Slayer
+    elif (((formato.get() == 1))
+        and ((cantidad.get() == 2 or (cantidad.get() == 3))
+        and ((accion.get() == 1) and (aventura.get() == 1))
+        and ((shounen.get() == 1) and (superpoderes.get() == 1)
+             and (gore.get() == 1))
+        and (ningun.get() == 1))):
+        demon = tkinter.Label(quiz_anime, text = "Deberias ver: << Demon Slayer >>")
+        demon.pack(anchor="w")
+
+#Chainsaw Man
+    elif (((formato.get() == 1))
+        and ((cantidad.get() == 0 or (cantidad.get() == 3))
+        and ((accion.get() == 1) and (terror.get() == 1))
+        and ((shounen.get() == 1) and (superpoderes.get() == 1)
+             and (gore.get() == 1))
+        and (ningun.get() == 1))):
+        chainsaw = tkinter.Label(quiz_anime, text = "Deberias ver: << Chainsaw Man >>")
+        chainsaw.pack(anchor="w")
+
+#My Hero Academia
+    elif (((formato.get() == 1))
+        and ((cantidad.get() == 2 or (cantidad.get() == 3))
+        and ((accion.get() == 1) and (aventura.get() == 1))
+        and ((shounen.get() == 1) and (superpoderes.get() == 1)
+             and (escolar.get() == 1))
+        and (ningun.get() == 1))):
+        mha = tkinter.Label(quiz_anime, text = "Deberias ver: << My Hero Academia >>")
+        mha.pack(anchor="w")
+
+#Spy X Family
+    elif (((formato.get() == 1))
+        and ((cantidad.get() == 1 or (cantidad.get() == 3))
+        and ((accion.get() == 1) and (comedia.get() == 1))
+        and ((shounen.get() == 1) and (superpoderes.get() == 1)
+             and (slice_of_life.get() == 1))
+        and (ningun.get() == 1))):
+        sxf = tkinter.Label(quiz_anime, text = "Deberias ver: << Spy X Family >>")
+        sxf.pack(anchor="w")
+
+#Sasaki to Miyano
+    elif (((formato.get() == 1))
+        and ((cantidad.get() == 0 or (cantidad.get() == 3))
+        and ((romance.get() == 1) and (comedia.get() == 1))
+        and ((bl.get() == 1) and (escolar.get() == 1)
+             and (slice_of_life.get() == 1))
+        and (ningun.get() == 1))):
+        stm = tkinter.Label(quiz_anime, text = "Deberias ver: << Sasaki to Miyano >>")
+        stm.pack(anchor="w")
+
+#Komi Can't Communicate
+    elif (((formato.get() == 1))
+        and ((cantidad.get() == 1 or (cantidad.get() == 3))
+        and ((romance.get() == 1) and (comedia.get() == 1))
+        and ((josei.get() == 1) and (escolar.get() == 1)
+             and (slice_of_life.get() == 1))
+        and (ningun.get() == 1))):
+        stm = tkinter.Label(quiz_anime, text = "Deberias ver: << Komi Can't Communicate >>")
+        stm.pack(anchor="w")
+
+#Banana Fish
+    elif (((formato.get() == 1))
+        and ((cantidad.get() == 1 or (cantidad.get() == 3))
+        and ((romance.get() == 1) and (drama.get() == 1))
+        and ((bl.get() == 1) and (seinen.get() == 1)
+             and (gore.get() == 1))
+        and (ningun.get() == 1))):
+        bf = tkinter.Label(quiz_anime, text = "Deberias ver: << Banana Fish >>")
+        bf.pack(anchor="w")
+
+#No.6
+    elif (((formato.get() == 1))
+        and ((cantidad.get() == 0 or (cantidad.get() == 3))
+        and ((misterio.get() == 1) and (drama.get() == 1))
+        and ((bl.get() == 1) and (seinen.get() == 1)
+             and (seinen.get() == 1))
+        and (ningun.get() == 1))):
+        no6 = tkinter.Label(quiz_anime, text = "Deberias ver: << No.6 >>")
+        no6.pack(anchor="w")
+
+#Magical Girl Ore
+    elif (((formato.get() == 1))
+        and ((cantidad.get() == 0 or (cantidad.get() == 3))
+        and ((accion.get() == 1) and (comedia.get() == 1))
+        and ((shoujo.get() == 1) and (superpoderes.get() == 1)
+             and (gl.get() == 1))
+        and (ningun.get() == 1))):
+        mgo = tkinter.Label(quiz_anime, text = "Deberias ver: << Magical Girl Ore >>")
+        mgo.pack(anchor="w")
+
+#How to keep a Mummy
+    elif (((formato.get() == 1))
+        and ((cantidad.get() == 0 or (cantidad.get() == 3))
+        and ((ciencia_ficcion.get() == 1) and (comedia.get() == 1))
+        and ((josei.get() == 1) and (superpoderes.get() == 1)
+             and (slice_of_life.get() == 1))
+        and (ningun.get() == 1))):
+        htkam = tkinter.Label(quiz_anime, text = "Deberias ver: << How to keep a Mummy >>")
+        htkam.pack(anchor="w")
+
+#Zombieland Saga
+    elif (((formato.get() == 1))
+        and ((cantidad.get() == 1 or (cantidad.get() == 3))
+        and ((terror.get() == 1) and (comedia.get() == 1))
+        and ((josei.get() == 1) and (gore.get() == 1)
+             and (slice_of_life.get() == 1))
+        and (ningun.get() == 1))):
+        zs = tkinter.Label(quiz_anime, text = "Deberias ver: << Zombieland Saga >>")
+        zs.pack(anchor="w")
+
+#Corpse Party
+    elif (((formato.get() == 1))
+        and ((cantidad.get() == 0 or (cantidad.get() == 3))
+        and ((terror.get() == 1) and (misterio.get() == 1))
+        and ((isekai.get() == 1) and (gore.get() == 1)
+             and (escolar.get() == 1))
+        and (ningun.get() == 1))):
+        cp = tkinter.Label(quiz_anime, text = "Deberias ver: << Corpse Party >>")
+        cp.pack(anchor="w")
+
+#Kotaro vive solo
+    elif (((formato.get() == 1))
+        and ((cantidad.get() == 0 or (cantidad.get() == 3))
+        and ((comedia.get() == 1) and (drama.get() == 1))
+        and ((josei.get() == 1) and (escolar.get() == 1)
+             and (slice_of_life.get() == 1))
+        and (ningun.get() == 1))):
+        kvs = tkinter.Label(quiz_anime, text = "Deberias ver: << Kotaro vive solo >>")
+        kvs.pack(anchor="w")
+
+
+#----------------------------------------------------------------------------------
+
+#Free
+    elif (((formato.get() == 1))
+        and ((cantidad.get() == 1 or (cantidad.get() == 3))
+        and ((accion.get() == 1) or (comedia.get() == 1))
+        and ((shounen.get() == 1) or (escolar.get() == 1)
+             or (slice_of_life.get() == 1))
+        and (natacion.get() == 1))):
+        free = tkinter.Label(quiz_anime, text = "Deberias ver: << Free >>")
+        free.pack(anchor="w")
+
+#Sk8 the Infinity
+    elif (((formato.get() == 1))
+        and ((cantidad.get() == 0 or (cantidad.get() == 3))
+        and ((accion.get() == 1) or (comedia.get() == 1))
+        and ((bl.get() == 1) or (shounen.get() == 1)
+             or (slice_of_life.get() == 1))
+        and (skate.get() == 1))):
+        sk8 = tkinter.Label(quiz_anime, text = "Deberias ver: << Sk8 the Infinity >>")
+        sk8.pack(anchor="w")
+
+#----------------------------------------------------------------------------------
     else:
-        malo = tkinter.Label(quiz_anime, text = "No hay ningun anime con esa descripcion")
-        malo.place(x=0, y=650)
+        malo = tkinter.Label(quiz_anime, text = "No hay recomendaciones aun")
+        malo.pack(anchor="w")
+#----------------------------------------------------------------------------------
+espacio1 = tkinter.Label(quiz_anime, text=' ', bg='white').pack(anchor="w")
+espacio2 = tkinter.Label(quiz_anime, text=' ', bg='white').pack(anchor="w")
+espacio3 = tkinter.Label(quiz_anime, text=' ', bg='white').pack(anchor="w")
+espacio4 = tkinter.Label(quiz_anime, text=' ', bg='white').pack(anchor="w")
+espacio5 = tkinter.Label(quiz_anime, text=' ', bg='white').pack(anchor="w")
+espacio6 = tkinter.Label(quiz_anime, text=' ', bg='white').pack(anchor="w")
+espacio7 = tkinter.Label(quiz_anime, text=' ', bg='white').pack(anchor="w")
+espacio8 = tkinter.Label(quiz_anime, text=' ', bg='white').pack(anchor="w")
+espacio9 = tkinter.Label(quiz_anime, text=' ', bg='white').pack(anchor="w")
+espacio10 = tkinter.Label(quiz_anime, text=' ', bg='white').pack(anchor="w")
+espacio11 = tkinter.Label(quiz_anime, text=' ', bg='white').pack(anchor="w")
+#----------------------------------------------------------------------------------
+boton_final = tkinter.Button(quiz_anime, text = "resultados", command=resultado)
+boton_final.pack()
+espacio12 = tkinter.Label(quiz_anime, text=' ', bg='white').pack(anchor="w")
 
-
-#Programa (mejor hecho)
-print("Escribre tu nombre, por favor: ")
-nombre = str(input())
-print("Bienvenidx a este quiz de anime", nombre)
+quiz_anime.mainloop()
