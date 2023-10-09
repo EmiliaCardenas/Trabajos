@@ -11,15 +11,13 @@ Morales A. (2021). Los beneficios emocionales que tiene ver una serie, según lo
 
 ### Explicación
 
-Teniendo como base varias preguntas, se puede llegar a despegar de 2-5 recomendaciones,  dependiendo de las elecciones del usuario y si coinciden con sus intereses. Sería recolectar una suma o resta de datos, dependiendo de las opciones elegidas. Cada pregunta tendrá sus números por separado (no mezclando las sumas o restas de otras preguntas), al final de tener todas las respuestas se comprarán con los datos de cada anime dependiendo las preguntas, intentando al final encontrar las mejores recomendaciones, acorde a lo seleccionado. Las preguntas pueden ser por ejempo:
+Teniendo como base varias preguntas,  dependiendo de las elecciones del usuario y si coinciden con sus intereses. Sería recolectar una suma o resta de datos, dependiendo de las opciones elegidas. Cada pregunta tendrá sus números por separado (no mezclando las sumas o restas de otras preguntas), al final de tener todas las respuestas se comprarán con los datos de cada anime dependiendo las preguntas, intentando al final encontrar las mejores recomendaciones, acorde a lo seleccionado. Las preguntas pueden ser por ejempo:
 
 Los géneros de gusto del usuario (Misterio, Thriller, Acción, Romance, etc).
 
 Los géneros relacionados al anime del gusto del usuario (Shounen, Shoujo, Josei, Mecha, etc.)
 
 La cantidad aceptada de episodios (12, 24, 30<, etc.)
-
-Si practican algún deporte (ya que hay animes deportivos)
 
 Si prefiere pelicula o serie
 
