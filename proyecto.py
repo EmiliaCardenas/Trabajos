@@ -14,40 +14,10 @@ quiz_anime.configure(bg="white")
 quiz_anime.geometry("1800x750")
 quiz_anime.title("Quiz Anime")
 
-
 """
 ================== funciones de preguntas 1 y 2  =====================================
 """
 
-"""
-Sub-Competencia: Separa el código en funciones pequeñas reusables,
-haciendo uso correcto de paso por parametros y return
-
-Error original: No se evidenciaba en donde se usaban las funciones
-        def formato (radiobutton1):
-            if radiobutton1 == pelicula:
-                res = 1
-            elif radiobutton1 == serie:
-                res = 2
-            elif radiobutton1 == ambas:
-                res = 3
-            else:
-                res = 0
-                
-Cambio realizado: Las funciones tienen un proposito mas claro
-y se usan en otra parte del codigo (no hay return ya que
-tkinter no me lo compilaba)
-        def formatos (eleccion1):
-            for i in range(len(eleccion1)):
-            ...
-        pregunta1 = formatos(eleccion1)
-            
-
-Líneas de código donde se ve la corrección: 50 a 64, 84 a 99,
-130 a 494, 659, 676, 900 a 903
-"""
-
-eleccion1 = ["Pelicula", "Serie"]
 def formatos (eleccion1):
     """
     (uso listas, uso funciones)
@@ -63,26 +33,6 @@ def formatos (eleccion1):
             font=('Arial',9)
             ).pack(anchor="w")
 
-"""
-Sub-Competencia: usa la forma más a apropiada al problema para
-guardar los datos (listas, variable, tipo de dato, etc...)
-
-Error original: Las listas no se compilaban en el codigo
-        lista = ["a", "b", "c"]
-        tkinter.Label(quiz_anime,
-                      text=lista).pack(anchor="w")
-        
-Cambio realizado: la lista se escribe en cada radiobutton sin tener
-que hacerlos manualmente (cosa que no se pudo hacer con los checkbutons)
-        radiobutton2 = tkinter.Radiobutton(quiz_anime, text= eleccion2[i],
-                                           variable = cantidad
-                                           ).pack(anchor="w")
-                                           
-Líneas de código donde se ve la corrección: 50 a 64, 84 a 99,
-"""
-
-eleccion2 = ["1 a 18","19 a 29","Más de 30",
-             "Sin importar la cantidad", "Elegí pelicula"]
 def cantidades (eleccion2):
     """
     (uso listas, uso funciones)
@@ -102,30 +52,6 @@ def cantidades (eleccion2):
 ================== funcion de resultados  =====================================
 """
 
-"""
-Sub-Competencia: Aplica estructuras condicionales para resolver un problema
-
-Error original: El codigo no compila al los condicinales
-no servir y estar puestos de manera correcta
-        if checkbutton3 == romance:
-            res = 1
-        elif checkbutton3 == comedia:
-            res = 2
-        elif checkbutton3 == drama:
-            res = 3
-        elif checkbutton3 == accion:
-            res = 4
-        elif checkbutton3 == ciencia_ficcion:
-            res = 5
-            
-Cambio realizado: las condiciones estan basadas en variables
-existentes y estan organiazadas con valores mas exactos
-        if (formato.get() == 0) and (cantidad.get() == 4):
-            if (((romance.get() == 1) and (aventura.get() == 1))
-                and ((shoujo.get() == 1) or (superpoderes.get() == 1))):
-
-Líneas de código donde se ve la corrección: 130 a 494
-"""
 
 def resultado ():
     """
@@ -507,63 +433,12 @@ recom = [
     ["Your Name"]
     ]
 
-"""
-Sub-Competencia: Usa operadores aritméticos de manera eficaz
-
-Error original: tenia ifs sumandose para crear condiciones
-las cuales al fina no compilaban ya que era una
-syntaxis incorrecta 
-        if (((cantidad.get() == 2 or (cantidad.get() == 3))
-            + ((accion.get() == 1) and (aventura.get() == 1))
-            + ((shounen.get() == 1) or (superpoderes.get() == 1)))):
-
-Cambio realizado: añadi en los ciclos una suma sencilla y una condicion
-de menor que en cada uno
-        while i < len(recom):
-            print("-",recom[i])
-            i = i + 1
-
-Líneas de código donde se ve la corrección: 531 a 541, 604 a 614
-"""
-
+# Ciclo de listas anidadas
 recom.sort()
 i = 0
 while i < len(recom):
-    """
-    (uso ciclos, uso listas anidadas)
-    recibe: recom (lista anidada)
-    toma la lista y va por cada valor y poniendoles un '-'
-    para que parezca una lista escrita de los animes
-    devuelve: la lista en orden alfabetico en forma de
-    prints en la consola de python
-    """
     print("-",recom[i])
     i = i + 1
-
-"""
-Sub-Competencia: usa la forma más a apropiada al problema para
-guardar los datos (listas, variable, tipo de dato, etc...)
-
-Error original: usar las listas anidadas para cada respuesta
-pero no compilaba ya que tkinter no lo permite (y no encontre
-la sintaxis para poder hacerlo)
-        if (((cantidad.get() == 2 or (cantidad.get() == 3))
-            and ((accion.get() == 1) and (aventura.get() == 1))
-            and ((shounen.get() == 1) or (superpoderes.get() == 1)))):
-            nt = tkinter.Label(quiz_anime,
-            text = "Deberias ver:", recoms[1][0])
-
-Cambio realizado: Se usaron las listas anidadas para dar una lista de
-que animes van a estar incluidos en el quiz
-        recom = [["El Castillo Vagabundo"],["El Viaje de Chihiro"]]
-        recom.sort()
-        i = 0
-        while i < len(recom):
-            print("-",recom[i])
-            i = i + 1
-
-Líneas de código donde se ve la corrección: 503 a 541, 569 a 614
-"""
 
 print("\nSeries:")  
 recoms = [
@@ -580,40 +455,17 @@ recoms = [
     ["Jujutsu Kaisen"],["Naruto"]
     ]
 
-"""
-Sub-Competencia: Aplica estructuras cíclicas para resolver
-un problema de manera eficiente
-
-Error original: No compila el codigo, los ciclos no tenian un uso adecuado
-y solo estaban puestos para cumplir con la entrega
-        while else == True:
-            print("aun no hay recomendaciones")
-
-Cambio realizado: Se usan para poder imprimir las listas anidadas y así
-no tener que poner una por una
-        i = 0
-        while i < len(recoms):
-            print("-",recoms[i])
-            i = i + 1
-
-Líneas de código donde se ve la corrección: 529 a 541, 602 a 614
-"""
-
 recoms.sort()
 i = 0
 while i < len(recoms):
-    """
-    (uso ciclos, uso listas anidadas)
-    recibe: recoms (lista anidada)
-    toma la lista y va por cada valor y poniendoles un '-'
-    para que parezca una lista escrita de los animes
-    devuelve: la lista en orden alfabetico en forma de
-    prints en la consola de python
-    """
     print("-",recoms[i])
     i = i + 1
 
 #Area de tkinter
+    
+eleccion1 = ["Pelicula", "Serie"]
+eleccion2 = ["1 a 18","19 a 29","Más de 30",
+             "Sin importar la cantidad", "Elegí pelicula"]
 
 #Texto inical
 parte1 = tkinter.Label(
@@ -648,14 +500,6 @@ text2 = tkinter.Label(
 
 formato = tkinter.IntVar()
 
-"""
-(uso funciones)
-recibe: funcion de formatos
-escribe la pregunta en el tkinter
-ya teniendo los checkbuttons
-devuelve: los radiobuttons en la pestaña tkinter
-"""
-
 pregunta1 = formatos(eleccion1)
 
 #Pregunta 2
@@ -666,13 +510,6 @@ text3 = tkinter.Label(
 
 cantidad = tkinter.IntVar()
 
-"""
-(uso funciones)
-recibe: funcion de cantidades
-escribe la pregunta en el tkinter
-ya teniendo los checkbuttons
-devuelve: los radiobuttons en la pestaña tkinter
-"""
 pregunta2 = cantidades (eleccion2)
 
 #Pregunta 3
@@ -680,13 +517,6 @@ text4 = tkinter.Label(
     quiz_anime,
     text="¿Que genero prefieres? (escoge 2)",
     bg="white", font=('Arial',12,'bold')).place(x=390, y=120)
-
-"""
-(uso variables)
-recibe: variables de cada opcion
-hace checkbuttons con cada variable
-devuelve: los checkbuttons en la pestaña tkinter
-"""
 
 romance = tkinter.IntVar()
 comedia = tkinter.IntVar()
@@ -748,13 +578,6 @@ text5 = tkinter.Label(
     quiz_anime,
     text="¿Que genero de anime prefieres? (escoge 2)",
     bg="white", font=('Arial',12,'bold')).place(x=790, y=120)
-
-"""
-(uso variables)
-recibe: variables de cada opcion
-hace checkbuttons con cada variable
-devuelve: los checkbuttons en la pestaña tkinter
-"""
 
 shounen = tkinter.IntVar()
 isekai = tkinter.IntVar()
@@ -877,26 +700,11 @@ ex10 = tkinter.Label(
 
 i=0
 while i < 5 :
-    """
-    (uso ciclos)
-    recibe: textos en blanco
-    toma el texto en blanco y lo repite
-    para generar un espacio mas limpio y ordenado
-    devuelve: lineas en blanco 
-    """
     espacio = tkinter.Label(
         quiz_anime, text=' ', bg='white').pack(anchor="w")
     i = i+1
 
 #Boton final
-"""
-(uso funciones)
-recibe: resultado(funcion de condicionales)
-toma la funcion y hace que actue una vez sea
-precionado el boton
-devuelve: el texto del anime que quede con las
-elecciones de los otros botones
-"""
 boton_final = tkinter.Button(
     quiz_anime, text = "Resultados",
     bg="#EFB8FF", command=resultado,
