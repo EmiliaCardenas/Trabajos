@@ -11,14 +11,167 @@ Morales A. (2021). Los beneficios emocionales que tiene ver una serie, según lo
 
 ### Explicación
 
+Inicia con una pestaña de tkinter, la cual es una biblioteca que abre una ventana extra, en la cual el usuario puede interactuar.
 Teniendo como base varias preguntas,  dependiendo de las elecciones del usuario y si coinciden con sus intereses. Sería recolectar una suma o resta de datos, dependiendo de las opciones elegidas. Cada pregunta tendrá sus números por separado (no mezclando las sumas o restas de otras preguntas), al final de tener todas las respuestas se comprarán con los datos de cada anime dependiendo las preguntas, intentando al final encontrar las mejores recomendaciones, acorde a lo seleccionado. Las preguntas pueden ser por ejempo:
 
-Los géneros de gusto del usuario (Misterio, Thriller, Acción, Romance, etc).
-
-Los géneros relacionados al anime del gusto del usuario (Shounen, Shoujo, Josei, Mecha, etc.)
-
-La cantidad aceptada de episodios (12, 24, 30<, etc.)
-
-Si prefiere pelicula o serie
+- Los géneros de gusto del usuario (Misterio, Thriller, Acción, Romance, etc).
+- Los géneros relacionados al anime del gusto del usuario (Shounen, Shoujo, Josei, Mecha, etc.)
+- La cantidad aceptada de episodios (12, 24, 30<, etc.)
+- Si prefiere pelicula o serie
 
 Eso sería un ejemplo de lo que puede tener el quiz, el cual tendrá una amplia gama de opciones de animes.
+
+### Correcciones
+
+"""
+Sub-Competencia: Separa el código en funciones pequeñas reusables,
+haciendo uso correcto de paso por parametros y return
+
+Error original: No se evidenciaba en donde se usaban las funciones
+        def formato (radiobutton1):
+            if radiobutton1 == pelicula:
+                res = 1
+            elif radiobutton1 == serie:
+                res = 2
+            elif radiobutton1 == ambas:
+                res = 3
+            else:
+                res = 0
+                
+Cambio realizado: Las funciones tienen un proposito mas claro
+y se usan en otra parte del codigo (no hay return ya que
+tkinter no me lo compilaba)
+        def formatos (eleccion1):
+            for i in range(len(eleccion1)):
+            ...
+        pregunta1 = formatos(eleccion1)
+            
+
+Líneas de código donde se ve la corrección: 50 a 64, 84 a 99,
+130 a 494, 659, 676, 900 a 903
+"""
+
+"""
+Sub-Competencia: usa la forma más a apropiada al problema para
+guardar los datos (listas, variable, tipo de dato, etc...)
+
+Error original: Las listas no se compilaban en el codigo
+        lista = ["a", "b", "c"]
+        tkinter.Label(quiz_anime,
+                      text=lista).pack(anchor="w")
+        
+Cambio realizado: la lista se escribe en cada radiobutton sin tener
+que hacerlos manualmente (cosa que no se pudo hacer con los checkbutons)
+        radiobutton2 = tkinter.Radiobutton(quiz_anime, text= eleccion2[i],
+                                           variable = cantidad
+                                           ).pack(anchor="w")
+                                           
+Líneas de código donde se ve la corrección: 50 a 64, 84 a 99,
+"""
+
+"""
+Sub-Competencia: Aplica estructuras condicionales para resolver un problema
+
+Error original: El codigo no compila al los condicinales
+no servir y estar puestos de manera correcta
+        if checkbutton3 == romance:
+            res = 1
+        elif checkbutton3 == comedia:
+            res = 2
+        elif checkbutton3 == drama:
+            res = 3
+        elif checkbutton3 == accion:
+            res = 4
+        elif checkbutton3 == ciencia_ficcion:
+            res = 5
+            
+Cambio realizado: las condiciones estan basadas en variables
+existentes y estan organiazadas con valores mas exactos
+        if (formato.get() == 0) and (cantidad.get() == 4):
+            if (((romance.get() == 1) and (aventura.get() == 1))
+                and ((shoujo.get() == 1) or (superpoderes.get() == 1))):
+
+Líneas de código donde se ve la corrección: 130 a 494
+"""
+
+"""
+Sub-Competencia: Usa operadores aritméticos de manera eficaz
+
+Error original: tenia ifs sumandose para crear condiciones
+las cuales al fina no compilaban ya que era una
+syntaxis incorrecta 
+        if (((cantidad.get() == 2 or (cantidad.get() == 3))
+            + ((accion.get() == 1) and (aventura.get() == 1))
+            + ((shounen.get() == 1) or (superpoderes.get() == 1)))):
+
+Cambio realizado: añadi en los ciclos una suma sencilla y una condicion
+de menor que en cada uno
+        while i < len(recom):
+            print("-",recom[i])
+            i = i + 1
+
+Líneas de código donde se ve la corrección: 531 a 541, 604 a 614
+"""
+
+"""
+Sub-Competencia: usa la forma más a apropiada al problema para
+guardar los datos (listas, variable, tipo de dato, etc...)
+
+Error original: usar las listas anidadas para cada respuesta
+pero no compilaba ya que tkinter no lo permite (y no encontre
+la sintaxis para poder hacerlo)
+        if (((cantidad.get() == 2 or (cantidad.get() == 3))
+            and ((accion.get() == 1) and (aventura.get() == 1))
+            and ((shounen.get() == 1) or (superpoderes.get() == 1)))):
+            nt = tkinter.Label(quiz_anime,
+            text = "Deberias ver:", recoms[1][0])
+
+Cambio realizado: Se usaron las listas anidadas para dar una lista de
+que animes van a estar incluidos en el quiz
+        recom = [["El Castillo Vagabundo"],["El Viaje de Chihiro"]]
+        recom.sort()
+        i = 0
+        while i < len(recom):
+            print("-",recom[i])
+            i = i + 1
+
+Líneas de código donde se ve la corrección: 503 a 541, 569 a 614
+"""
+
+"""
+Sub-Competencia: Aplica estructuras cíclicas para resolver
+un problema de manera eficiente
+
+Error original: No compila el codigo, los ciclos no tenian un uso adecuado
+y solo estaban puestos para cumplir con la entrega
+        while else == True:
+            print("aun no hay recomendaciones")
+
+Cambio realizado: Se usan para poder imprimir las listas anidadas y así
+no tener que poner una por una
+        i = 0
+        while i < len(recoms):
+            print("-",recoms[i])
+            i = i + 1
+
+Líneas de código donde se ve la corrección: 529 a 541, 602 a 614
+"""
+
+### Comentarios
+    """
+    (uso ciclos, uso listas anidadas)
+    toma la lista y va por cada valor y poniendoles un '-'
+    para que parezca una lista escrita de los animes
+    devuelve: la lista en orden alfabetico en forma de
+    prints en la consola de python
+    """
+    
+    """
+    (uso funciones)
+    toma la funcion y hace que actue una vez sea
+    precionado el boton
+    devuelve: el texto del anime que quede con las
+    elecciones de los otros botones
+    """
+
+
