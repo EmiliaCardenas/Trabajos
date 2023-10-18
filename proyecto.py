@@ -48,6 +48,17 @@ def cantidades (eleccion2):
             font=('Arial',9)
             ).pack(anchor="w")
 
+def orden (lista):
+    """
+    (uso ciclos, uso funciones)
+    recibe: recoms y recom (listas anidadas)
+    toma la lista y la imprime junto con un
+    guion al inicio
+    """
+    i = 0
+    while i < len(lista):
+        print("-",lista[i])
+        i = i + 1
 """
 ================== funcion de resultados  =====================================
 """
@@ -435,10 +446,8 @@ recom = [
 
 # Ciclo de listas anidadas
 recom.sort()
-i = 0
-while i < len(recom):
-    print("-",recom[i])
-    i = i + 1
+
+orden(recom)
 
 print("\nSeries:")  
 recoms = [
@@ -456,10 +465,8 @@ recoms = [
     ]
 
 recoms.sort()
-i = 0
-while i < len(recoms):
-    print("-",recoms[i])
-    i = i + 1
+
+orden(recoms)
 
 #Area de tkinter
     
